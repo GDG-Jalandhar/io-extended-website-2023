@@ -20,7 +20,9 @@ h6 {
   --main-white: #f8f9fa;
   --main-gray: rgb(238, 235, 235);
 }
-
+.w-20 {
+  width: 20%;
+}
 #tech-event {
   color: var(--main-blue);
 }
@@ -31,7 +33,7 @@ h6 {
 
 .header {
   font-weight: 800;
-  max-width: 380px;
+  /* max-width: 380px; */
 }
 
 .main-content {
@@ -85,10 +87,6 @@ h2 {
   border-radius: 50px;
 }
 
-.detailsSec {
-  max-width: 550px;
-  margin-left: 60px;
-}
 
 .tech {
   margin-left: 6rem;
@@ -275,10 +273,6 @@ p {
     text-align: center;
   }
 
-  .detailsSec {
-    margin-left: 0;
-    margin-top: 2rem;
-  }
 
   .tech {
     margin-left: 0;
@@ -350,11 +344,6 @@ p {
     width: 100%;
     border-radius: 0;
     margin-bottom: 2rem;
-  }
-
-  .detailsSec {
-    margin-left: 0;
-    margin-top: 0;
   }
 }
 
@@ -765,12 +754,6 @@ p {
   font-weight: 800;
 }
 
-.position {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-}
 
 .feature-text {
   margin-top: 0px;
@@ -788,9 +771,13 @@ p {
 }
 
 .team-image-wrapper {
-  clip-path: circle(50% at 50% 50%);
   width: 130px;
   height: 130px;
+}
+
+.team-image-wrapper > img {
+  width: 100%;
+  height: 100%;
 }
 
 .team-member-image {
@@ -1069,11 +1056,6 @@ hr {
     font-size: 1rem;
   }
 
-  .detailsSec,
-  .tech {
-    margin-top: -1.8rem;
-  }
-
   .googledevimgptu,
   .googledev {
     transform: scale(0.8);
@@ -1095,7 +1077,7 @@ hr {
   }
   .header {
     font-size: 3.5rem;
-    max-width: 450px;
+    /* max-width: 450px; */
   }
 
   .footer-icons {
@@ -1114,7 +1096,7 @@ hr {
   }
   .header {
     font-size: 4rem;
-    max-width: 480px;
+    /* max-width: 480px; */
   }
 
   .footer-icons {
