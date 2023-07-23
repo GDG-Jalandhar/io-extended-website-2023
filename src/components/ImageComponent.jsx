@@ -35,15 +35,14 @@ const ImageComponent = () => {
         <img
           src={banner_mobile}
           width="100%"
-          height="270px"
-          alt="Mobile Image"
+          alt="mobile banner"
         />
       )}
       {screenSize === "medium" && (
-        <img src={banner_mid} width="100%" height="300px" alt="Medium Image" />
+        <img src={banner_mid} width="100%" alt="medium screen banner" />
       )}
       {screenSize === "large" && (
-        <img src={banner_large} width="100%" height="300px" alt="Large Image" />
+        <img src={banner_large} width="100%" alt="large screen banner" />
       )}
     </div>
   );
