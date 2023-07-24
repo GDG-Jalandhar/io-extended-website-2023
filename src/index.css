@@ -20,9 +20,9 @@ h6 {
   --main-white: #f8f9fa;
   --main-gray: rgb(238, 235, 235);
 }
-.w-20 {
-  width: 20%;
-}
+/* .w-20 {
+  flex-grow: 1
+} */
 #tech-event {
   color: var(--main-blue);
 }

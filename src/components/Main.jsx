@@ -140,7 +140,7 @@ const Main = () => {
     },
   ];
 
-  const teamMembersRender = teamMembers.map((member, index) => <div key={member.name+member.position+member.company} className="card w-20 mx-3 mb-5">
+  const teamMembersRender = teamMembers.map((member, index) => <div key={member.name+member.position+member.company} className="card col-md-4 col-lg-2 mx-3 mb-5">
     <div className="team-image-wrapper">
       <img className="img-thumbnail object-cover object-top rounded-circle"  src={member.image} alt={member.name + ' profile'}/>
     </div>
@@ -314,7 +314,7 @@ const Main = () => {
         <div className="team mt-5" id="team">
           <h2 className="text-center mb-3">Team</h2>
 
-          <div className="d-flex flex-wrap justify-content-center">
+          <div className="row flex-wrap justify-content-center">
             {teamMembersRender}
           </div>
         </div>
