@@ -12,27 +12,23 @@ import {
   MDBNavbarLink,
   MDBCollapse,
 } from "mdb-react-ui-kit";
-
-import logo from "../assets/logo.png";
+import logo from "../assets/IO-logo.svg";
 
 const Navbar = () => {
   //useState for mobile view
   const [showBasic, setShowBasic] = useState(false);
 
   return (
-    <MDBNavbar expand="lg" light bgColor="light">
+    <MDBNavbar className="p-0" expand="lg" light bgColor="white">
       <MDBContainer fluid className="nav-content">
-        <div className="logo-container">
           <MDBNavbarBrand href="/">
             <img
               src={logo}
-              width="300px"
-              height="auto"
               className="logo"
-              alt=""
+              height="60"
+              alt="Homepage Link Logo"
             />
           </MDBNavbarBrand>
-        </div>
 
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"
