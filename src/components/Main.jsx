@@ -20,9 +20,7 @@ import suraj_pic from "../assets/suraj_pic.jpg";
 import simar_pic from "../assets/simar_pic.jpg";
 import gurkirat_pic from "../assets/gurkirat_pic.jpeg";
 
-import {
-  
-} from "@fortawesome/free-brands-svg-icons";
+import {} from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -140,16 +138,25 @@ const Main = () => {
     },
   ];
 
-  const teamMembersRender = teamMembers.map((member, index) => <div key={member.name+member.position+member.company} className="card col-md-4 col-lg-2 mx-3 mb-5">
-    <div className="team-image-wrapper">
-      <img className="img-thumbnail object-cover object-top rounded-circle"  src={member.image} alt={member.name + ' profile'}/>
+  const teamMembersRender = teamMembers.map((member, index) => (
+    <div
+      key={member.name + member.position + member.company}
+      className="card col-md-4 col-lg-2 mx-3 mb-5"
+    >
+      <div className="team-image-wrapper">
+        <img
+          className="img-thumbnail object-cover object-top rounded-circle"
+          src={member.image}
+          alt={member.name + " profile"}
+        />
+      </div>
+      <p className="text-blk name">{member.name}</p>
+      <p className="text-blk ">{member.position}</p>
+      <p className="text-blk ">
+        <b>{member.company}</b>
+      </p>
     </div>
-    <p className="text-blk name">{member.name}</p>
-    <p className="text-blk ">{member.position}</p>
-    <p className="text-blk ">
-      <b>{member.company}</b>
-    </p>
-  </div>);
+  ));
   return (
     <>
       <ImageComponent />
@@ -157,7 +164,9 @@ const Main = () => {
         <div className="row">
           <div className="col-lg-7">
             <h1 className="font-weight-lighter header">
-              Unleash <br/><span id="tech-event">Tomorrow's Tech Today:</span><br/>
+              Unleash <br />
+              <span id="tech-event">Tomorrow's Tech Today:</span>
+              <br />
               <span id="developers">Learn, Code, Innovate!</span>
             </h1>
 
@@ -178,14 +187,13 @@ const Main = () => {
                   I.K. Gujral Punjab Technical University -9F35+9F9, Kapurthala
                   Highway, VPO - Ibban, Distt, Kapurthala, Punjab 144603
                 </span> */}
-                <span id="data">
-                  To Be Announced
-                </span>
+                <span id="data">To Be Announced</span>
               </h6>
               <p className="text-center">
                 Google I/O Extended is the community led counterpart to Google
-                I/O, our annual Google led conference where the world hears about
-                Google's latest developer solutions, products, and technology.
+                I/O, our annual Google led conference where the world hears
+                about Google's latest developer solutions, products, and
+                technology.
               </p>
               <div className="d-flex justify-content-center align-items-center">
                 <button className="btn btn-primary rounded-pill disabled">
@@ -213,10 +221,10 @@ const Main = () => {
                 Google I/O Extended Jalandhar, a full day event, where you find
                 updates of Google's Products. The magic of I/O doesn&apos;t end
                 after the main event. Local developers come together for I/O
-                Extended events to discuss the latest new technologies, summarize
-                content, hosting Q&As, and meet other technology enthusiasts. This
-                will be a physical event, promising to each of our attendee an
-                experience, unlike anything they've ever seen.
+                Extended events to discuss the latest new technologies,
+                summarize content, hosting Q&As, and meet other technology
+                enthusiasts. This will be a physical event, promising to each of
+                our attendee an experience, unlike anything they've ever seen.
               </p>
             </section>
           </div>
@@ -225,10 +233,11 @@ const Main = () => {
           <div className="col-12">
             <h1 className="text-center">Technologies in Focus</h1>
             <p className="my-3">
-              At sessions that span from the technical to the visionary, let&apos;s
-              celebrate and discover what the technologies can enable: how product
-              innovation, open source, and ML and AI can propel enterprises forward
-              and solve the big problems that impact all of us.
+              At sessions that span from the technical to the visionary,
+              let&apos;s celebrate and discover what the technologies can
+              enable: how product innovation, open source, and ML and AI can
+              propel enterprises forward and solve the big problems that impact
+              all of us.
             </p>
             <div className="icons d-flex">
               {techs?.map((result, index) => (
@@ -247,15 +256,19 @@ const Main = () => {
           </div>
         </div>
 
-        <hr />
-        <div className="partners" id="partners">
+        <hr id="partners" />
+        <div className="partners">
           <h2 className="text-center mt-2">Sponsors</h2>
           <p className="text-center mt-2 mx-2">
             Sponsors dedicated to building remarkable experience!
           </p>
 
           <div className="googledev">
-            <a href="https://developers.googleblog.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://developers.googleblog.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={googledev}
                 title="Google Developers"
@@ -266,22 +279,23 @@ const Main = () => {
 
             <h2 className="text-center mt-2">Community Partners</h2>
             <div className="community_logos">
-              <a href="https://gdg.community.dev/gdg-jalandhar/" target="_blank" rel="noreferrer">
-                <div className="commdiv">
-                  <div>
-                    <img
-                      src={GDG_Jalandhar}
-                      title="GDG Jalandhar"
-                      className="gdgjalandharimg"
-                      alt="GDG Jalandhar logo"
-                    />
-                  </div>
-                  <div>GDG Jalandhar</div>
+              {/* <a href="https://gdg.community.dev/gdg-jalandhar/" target="_blank" rel="noreferrer"> */}
+              <div className="commdiv">
+                <div>
+                  <img
+                    src={GDG_Jalandhar}
+                    title="GDSC PTU"
+                    className="gdgjalandharimg"
+                    alt="GDG PTU logo"
+                  />
                 </div>
-              </a>
+                <div>GDSC PTU</div>
+              </div>
+              {/* </a> */}
               <a
                 href="https://bizarre-coders-official.netlify.app/"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
               >
                 <div className="commdiv">
                   <img
@@ -298,20 +312,23 @@ const Main = () => {
 
             <h2 className="text-center mt-2">Venue Partner</h2>
             <a href="https://ptu.ac.in/" target="_blank" rel="noreferrer">
-              <img
-                src={ptulogo}
-                title="IKGPTU"
-                className="googledevimgptu"
-                alt=""
-              />
+              <div className="text-black flex-column">
+                <img
+                  src={ptulogo}
+                  title="IKGPTU"
+                  className="googledevimgptu"
+                  alt=""
+                />{" "}
+                <div>IKGPTU, Jalandhar</div>
+              </div>
             </a>
           </div>
         </div>
 
         {/* Team */}
 
-        <hr />
-        <div className="team mt-5" id="team">
+        <hr id="team" />
+        <div className="team mt-4">
           <h2 className="text-center mb-3">Team</h2>
 
           <div className="row flex-wrap justify-content-center">
@@ -319,16 +336,14 @@ const Main = () => {
           </div>
         </div>
 
-        <hr />
-        <div className="faqs" id="faqs">
+        <hr id="faqs" />
+        <div className="faqs">
           <h2 className="text-center mt-2">Frequently asked questions</h2>
           <p className="text-center mt-2">
             Need Answers? Everything you need to know.
           </p>
         </div>
       </div>
-
-      
 
       {/* <hr /> */}
 
@@ -529,8 +544,6 @@ const Main = () => {
 
       {/* Partners */}
 
-      
-
       <MDBContainer className="mt-5" style={{ maxWidth: "90%" }}>
         <MDBAccordion>
           <MDBAccordionItem
@@ -600,13 +613,21 @@ const Main = () => {
           <section className="d-flex  follow-section">
             <h5>Follow Us : </h5>
             <div className="followus ">
-              <a href="https://www.facebook.com/GDGJalandhar" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.facebook.com/GDGJalandhar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   className="ml-3 pl-3 footer-icons foot-fb"
                   icon={["fab", "facebook"]}
                 />
               </a>
-              <a href="https://www.instagram.com/gdgjalandhar" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.instagram.com/gdgjalandhar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   className="ml-3 pl-3 footer-icons foot-in"
                   icon={["fab", "instagram"]}
@@ -614,14 +635,19 @@ const Main = () => {
               </a>
               <a
                 href="http://linkedin.com/company/GDGJalandhar"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon
                   className="ml-3 pl-3 footer-icons foot-li"
                   icon={["fab", "linkedin"]}
                 />
               </a>
-              <a href="https://twitter.com/gdgjalandhar" target="_blank" rel="noreferrer">
+              <a
+                href="https://twitter.com/gdgjalandhar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   className="ml-3 pl-3 footer-icons foot-tw"
                   icon={["fab", "twitter"]}
@@ -638,21 +664,24 @@ const Main = () => {
             <a
               className="footer-links"
               href="https://developers.google.com/community/gdg"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               About GDG Program
             </a>
             <a
               className="footer-links"
               href="https://www.womentechmakers.com/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               About WTM Program
             </a>
             <a
               className="footer-links"
               href="https://developers.google.com/community-guidelines"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               Community Guidelines
             </a>

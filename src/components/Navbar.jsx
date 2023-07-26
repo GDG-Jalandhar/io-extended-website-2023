@@ -78,6 +78,11 @@ const Navbar = () => {
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>
+        <div className="d-flex justify-content-center align-items-center">
+                <button className="btn btn-primary rounded-pill disabled">
+                  Registrations Starting Soon
+                </button>
+              </div>
       </MDBContainer>
     </MDBNavbar>
   );
