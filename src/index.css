@@ -27,6 +27,10 @@ h6 {
   color: var(--main-blue);
 }
 
+.event-details p i {
+  width: 20px;
+}
+
 #developers {
   color: var(--main-red);
 }
@@ -70,8 +74,8 @@ h2 {
 
 #data {
   font-size: 1.3rem;
-  font-weight: 300;
-  color: gray;
+  font-weight: 400;
+  color: #121215;
 }
 
 #location {
@@ -96,14 +100,9 @@ h2 {
 p {
   margin-top: 2rem;
 }
-.icons {
-  justify-content: space-evenly;
-}
+
 .boxes {
-  border-radius: 100%;
-  width: 100px;
-  min-height: 100px;
-  background-color: var(--main-gray);
+  flex-grow: 1;
 }
 
 .footer {
@@ -279,13 +278,7 @@ p {
     margin-top: 2rem;
   }
 
-  .icons {
-    justify-content: center;
-  }
-
-  .boxes {
-    margin: 0.5rem;
-  }
+  
 
   .schedule {
     margin-left: 0;
@@ -353,15 +346,6 @@ p {
     margin-top: 2rem;
     text-align: center;
     padding: 1.5rem;
-  }
-
-  .icons {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .boxes {
-    margin: 1rem;
   }
 }
 
@@ -1076,7 +1060,7 @@ hr {
     font-size: 1.2rem;
   }
   .header {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     /* max-width: 450px; */
   }
 
