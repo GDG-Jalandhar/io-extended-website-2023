@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import details_img from "../assets/details_img.jpg";
 import googledev from "../assets/googledev.jpg";
 import Bizarre_Coders from "../assets/Bizarre_Coders.jpg";
@@ -24,6 +24,24 @@ import {} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Main = () => {
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  const handleScroll = () => {
+    const offset = 300;
+    if (window.scrollY > offset) {
+      setShowScrollToTop(true);
+    } else {
+      setShowScrollToTop(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const techs = [
     {
       name: "Android",
@@ -168,181 +186,203 @@ const Main = () => {
       <div className="container-fluid justify-content-center mt-5" id="about">
         <div className="row justify-content-center">
           <div className="col-md-10">
-          <div className="row">
-            <div className="col-lg-7">
-              <h1 className="font-weight-lighter header">
-                Unleash <br/><span id="tech-event">Tomorrow's Tech Today:</span><br/>
-                <span id="developers">Learn, Code, Innovate!</span>
-              </h1>
+            <div className="row">
+              <div className="col-lg-7">
+                <h1 className="font-weight-lighter header">
+                  Unleash <br />
+                  <span id="tech-event">Tomorrow's Tech Today:</span>
+                  <br />
+                  <span id="developers">Learn, Code, Innovate!</span>
+                </h1>
 
-              <div className="event-details">
-                <p className="m-0">
-                  <i className="fa fa-calendar"></i>
-                  <span id="data" className="ms-1">August 12 , 2023</span>
-                  {/* <span id="data">To Be Announced</span> */}
-                </p>
-                <p className="m-0">
-                  <i className="fa fa-clock"></i>
-                  <span id="data" className="ms-1">09:00 AM - 4:00 PM IST</span>
-                  {/* <span id="data">To Be Announced</span> */}
-                </p>
-                <p className="m-0" id="location">
-                  <i className="fa fa-map-marker"></i> 
-                  <span id="data" className="ms-1">
-                    I.K. Gujral Punjab Technical University, Jalandhar, Punjab
-                  </span>
-                  {/* <span id="data">
+                <div className="event-details">
+                  <p className="m-0">
+                    <i className="fa fa-calendar"></i>
+                    <span id="data" className="ms-1">
+                      August 12 , 2023
+                    </span>
+                    {/* <span id="data">To Be Announced</span> */}
+                  </p>
+                  <p className="m-0">
+                    <i className="fa fa-clock"></i>
+                    <span id="data" className="ms-1">
+                      09:00 AM - 4:00 PM IST
+                    </span>
+                    {/* <span id="data">To Be Announced</span> */}
+                  </p>
+                  <p className="m-0" id="location">
+                    <i className="fa fa-map-marker"></i>
+                    <a
+                      id="data"
+                      className="ms-1 text-decoration-underline"
+                      href="https://goo.gl/maps/siUi8Lr2nWK3x5Ku7"
+                      target="_blank"
+                    >
+                      I.K. Gujral Punjab Technical University, Jalandhar, Punjab
+                    </a>
+                    {/* <span id="data">
                     To Be Announced
                   </span> */}
-                </p>
-                <p className="mt-2">
-                  Google I/O Extended is the community led counterpart to Google
-                  I/O, our annual Google led conference where the world hears about
-                  Google's latest developer solutions, products, and technology.
-                </p>
-                <div className="">
-                  <button className="btn btn-primary rounded-pill disabled">
-                    Registrations Starting Soon
-                  </button>
+                  </p>
+                  <p className="mt-2">
+                    Google I/O Extended is the community led counterpart to
+                    Google I/O, our annual Google led conference where the world
+                    hears about Google's latest developer solutions, products,
+                    and technology.
+                  </p>
+                  <div className="">
+                    <button className="btn btn-primary rounded-pill disabled">
+                      Registrations Starting Soon
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-5 d-flex flex-column justify-content-center mt-lg-0 mt-sm-4 mt-4">
-              <img
-                src="https://io.google/2023/app/images/cs_products.svg"
-                className="img-fluid rounded-9"
-                alt="Google IO Laptop"
-              />
-            </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-lg-6 d-flex flex-column justify-content-center">
-              <img src={details_img} className="img-fluid rounded-9" alt="" />
-            </div>
-            <div className="col-lg-6 d-flex flex-column justify-content-center ">
-              <section className="text-center mt-lg-0 mt-sm-4 mt-3">
-                <h2>What is Google I/O Extended Jalandhar ?</h2>
-                <p>
-                  Google I/O Extended Jalandhar, a full day event, where you find
-                  updates of Google's Products. The magic of I/O doesn&apos;t end
-                  after the main event. Local developers come together for I/O
-                  Extended events to discuss the latest new technologies, summarize
-                  content, hosting Q&As, and meet other technology enthusiasts. This
-                  will be a physical event, promising to each of our attendee an
-                  experience, unlike anything they've ever seen.
-                </p>
-              </section>
-            </div>
-          </div>
-          <div className="row mt-5">
-            <div className="col-12">
-              <h1 className="text-center">Technologies in Focus</h1>
-              <p className="my-3">
-                At sessions that span from the technical to the visionary, let&apos;s
-                celebrate and discover what the technologies can enable: how product
-                innovation, open source, and ML and AI can propel enterprises forward
-                and solve the big problems that impact all of us.
-              </p>
-              <div className="icons d-flex flex-wrap justify-content-center aligh-items-center">
-                {techs?.map((result, index) => (
-                  <div className="px-2 mb-3" key={index}>
-                    <a href={result.link} target="_blank" rel="noreferrer">
-                      {" "}
-                      <img
-                        src={result.logo}
-                        title={result.name}
-                        alt={result.name}
-                      />{" "}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <hr />
-          <div className="partners" id="partners">
-            <h2 className="text-center mt-2">Sponsors</h2>
-            <p className="text-center mt-2 mx-2">
-              Sponsors dedicated to building remarkable experience!
-            </p>
-
-            <div className="googledev">
-              <a href="https://developers.googleblog.com/" target="_blank" rel="noreferrer">
+              <div className="col-lg-5 d-flex flex-column justify-content-center mt-lg-0 mt-sm-4 mt-4">
                 <img
-                  src={googledev}
-                  title="Google Developers"
-                  className="googledevimg"
-                  alt="Google Developers logo"
+                  src="https://io.google/2023/app/images/cs_products.svg"
+                  className="img-fluid rounded-9"
+                  alt="Google IO Laptop"
                 />
-              </a>
-
-            <h2 className="text-center mt-2">Community Partners</h2>
-            <div className="community_logos">
-              {/* <a href="https://gdg.community.dev/gdg-jalandhar/" target="_blank" rel="noreferrer"> */}
-              <div className="commdiv">
-                <div>
-                  <img
-                    src={GDG_Jalandhar}
-                    title="GDSC PTU"
-                    className="gdgjalandharimg"
-                    alt="GDG PTU logo"
-                  />
-                </div>
-                <div>GDSC PTU</div>
               </div>
-              {/* </a> */}
-              <a
-                href="https://bizarre-coders-official.netlify.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="commdiv">
-                  <img
-                    src={Bizarre_Coders}
-                    title="Bizarre Coders"
-                    className="bizarrecodersimg"
-                    alt="Bizarre Coders logo"
-                  />
+            </div>
+            <div className="row mt-4">
+              <div className="col-lg-6 d-flex flex-column justify-content-center">
+                <img src={details_img} className="img-fluid rounded-9" alt="" />
+              </div>
+              <div className="col-lg-6 d-flex flex-column justify-content-center ">
+                <section className="text-center mt-lg-0 mt-sm-4 mt-3">
+                  <h2>What is Google I/O Extended Jalandhar ?</h2>
+                  <p>
+                    Google I/O Extended Jalandhar, a full day event, where you
+                    find updates of Google's Products. The magic of I/O
+                    doesn&apos;t end after the main event. Local developers come
+                    together for I/O Extended events to discuss the latest new
+                    technologies, summarize content, hosting Q&As, and meet
+                    other technology enthusiasts. This will be a physical event,
+                    promising to each of our attendee an experience, unlike
+                    anything they've ever seen.
+                  </p>
+                </section>
+              </div>
+            </div>
+            <div className="row mt-5">
+              <div className="col-12">
+                <h1 className="text-center">Technologies in Focus</h1>
+                <p className="my-3">
+                  At sessions that span from the technical to the visionary,
+                  let&apos;s celebrate and discover what the technologies can
+                  enable: how product innovation, open source, and ML and AI can
+                  propel enterprises forward and solve the big problems that
+                  impact all of us.
+                </p>
+                <div className="icons d-flex flex-wrap justify-content-center aligh-items-center">
+                  {techs?.map((result, index) => (
+                    <div className="px-2 mb-3" key={index}>
+                      <a href={result.link} target="_blank" rel="noreferrer">
+                        {" "}
+                        <img
+                          src={result.logo}
+                          title={result.name}
+                          alt={result.name}
+                        />{" "}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
 
-                    <div>Bizarre Coders</div>
-                  </div>
+            <hr />
+            <div className="partners" id="partners">
+              <h2 className="text-center mt-2">Sponsors</h2>
+              <p className="text-center mt-2 mx-2">
+                Sponsors dedicated to building remarkable experience!
+              </p>
+
+              <div className="googledev">
+                <a
+                  href="https://developers.googleblog.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={googledev}
+                    title="Google Developers"
+                    className="googledevimg"
+                    alt="Google Developers logo"
+                  />
+                </a>
+
+                <h2 className="text-center mt-2">Community Partners</h2>
+                <div className="community_logos">
+                  <a
+                    href="https://gdg.community.dev/gdg-jalandhar/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="commdiv">
+                      <div>
+                        <img
+                          src={GDG_Jalandhar}
+                          title="GDSC PTU"
+                          className="gdgjalandharimg"
+                          alt="GDSC IKGPTU logo"
+                        />
+                      </div>
+                      <div>GDSC PTU</div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://bizarre-coders-official.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="commdiv">
+                      <img
+                        src={Bizarre_Coders}
+                        title="Bizarre Coders"
+                        className="bizarrecodersimg"
+                        alt="Bizarre Coders logo"
+                      />
+
+                      <div>Bizarre Coders</div>
+                    </div>
+                  </a>
+                </div>
+
+                <h2 className="text-center mt-2">Venue Partner</h2>
+                <a href="https://ptu.ac.in/" target="_blank" rel="noreferrer">
+                  <img
+                    src={ptulogo}
+                    title="IKGPTU"
+                    className="googledevimgptu"
+                    alt="IK Gujral Punjab Technical University logo"
+                  />
                 </a>
               </div>
+            </div>
 
-              <h2 className="text-center mt-2">Venue Partner</h2>
-              <a href="https://ptu.ac.in/" target="_blank" rel="noreferrer">
-                <img
-                  src={ptulogo}
-                  title="IKGPTU"
-                  className="googledevimgptu"
-                  alt="IK Gujral Punjab Technical University logo"
-                />
-              </a>
+            {/* Team */}
+
+            <hr />
+            <div className="team mt-5" id="team">
+              <h2 className="text-center mb-3">Team</h2>
+
+              <div className="row flex-wrap justify-content-center">
+                {teamMembersRender}
+              </div>
+            </div>
+
+            <hr />
+            <div className="faqs" id="faqs">
+              <h2 className="text-center mt-2">Frequently asked questions</h2>
+              <p className="text-center mt-2">
+                Need Answers? Everything you need to know.
+              </p>
             </div>
           </div>
-
-          {/* Team */}
-
-          <hr />
-          <div className="team mt-5" id="team">
-            <h2 className="text-center mb-3">Team</h2>
-
-            <div className="row flex-wrap justify-content-center">
-              {teamMembersRender}
-            </div>
-          </div>
-
-        <hr />
-        <div className="faqs" id="faqs">
-          <h2 className="text-center mt-2">Frequently asked questions</h2>
-          <p className="text-center mt-2">
-            Need Answers? Everything you need to know.
-          </p>
         </div>
       </div>
-
-      
 
       {/* <hr /> */}
 
@@ -691,6 +731,16 @@ const Main = () => {
           </section>
         </div>
       </div>
+
+      <button
+        type="button"
+        className={`btn btn-primary rounded scroll-to-top-btn ${
+          showScrollToTop ? "show" : ""
+        }`}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <i className="fa fa-arrow-up"></i>
+      </button>
     </>
   );
 };

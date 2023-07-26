@@ -21,14 +21,14 @@ const Navbar = () => {
   return (
     <MDBNavbar className="p-0" expand="lg" light bgColor="white">
       <MDBContainer fluid className="nav-content">
-          <MDBNavbarBrand href="/">
-            <img
-              src={logo}
-              className="logo"
-              height="60"
-              alt="Homepage Link Logo"
-            />
-          </MDBNavbarBrand>
+        <MDBNavbarBrand href="/">
+          <img
+            src={logo}
+            className="logo"
+            height="60"
+            alt="Homepage Link Logo"
+          />
+        </MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls="navbarSupportedContent"
@@ -74,11 +74,11 @@ const Navbar = () => {
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>
-        <div className="d-flex justify-content-center align-items-center">
-                <button className="btn btn-primary rounded-pill disabled">
-                  Registrations Starting Soon
-                </button>
-              </div>
+        <div className="">
+          <button className="btn btn-primary rounded-pill disabled">
+            Registrations Starting Soon
+          </button>
+        </div>
       </MDBContainer>
     </MDBNavbar>
   );
