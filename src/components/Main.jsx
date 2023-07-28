@@ -90,6 +90,12 @@ const Main = () => {
       image: "https://avatars.githubusercontent.com/u/20265606?v=4",
     },
     {
+      name: "Suraj Pandey",
+      position: "GDSC Lead",
+      company: "IKGPTU",
+      image: suraj_pic,
+    },
+    {
       name: "Kamal Nayan",
       position: "Student",
       company: "IKGPTU",
@@ -100,12 +106,6 @@ const Main = () => {
       position: "Student",
       company: "IKGPTU",
       image: agrim_pic,
-    },
-    {
-      name: "Suraj Pandey",
-      position: "Student",
-      company: "IKGPTU",
-      image: suraj_pic,
     },
     {
       name: "Aryan Sharma",
@@ -288,7 +288,7 @@ const Main = () => {
                         alt="GDSC IKGPTU logo"
                       />
                     </div>
-                    <div>GDGSC IKGPTU</div>
+                    <div>GDSC IKGPTU</div>
                   </div>
                 </a>
                 <a
