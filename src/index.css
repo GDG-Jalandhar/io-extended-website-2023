@@ -23,6 +23,12 @@ h6 {
 /* .w-20 {
   flex-grow: 1
 } */
+
+.ae-ticket-book-button {
+  border-color: #3b71ca !important;
+  color: #3b71ca !important;
+}
+
 #tech-event {
   color: var(--main-blue);
 }
