@@ -182,7 +182,15 @@ const Main = () => {
                 <p className="m-0" id="location">
                   <i className="fa fa-map-marker"></i> 
                   <span id="data" className="ms-1">
-                    I.K. Gujral Punjab Technical University, Jalandhar, Punjab
+                  <a
+                      id="data"
+                      className="ms-1 text-decoration-underline"
+                      href="https://goo.gl/maps/siUi8Lr2nWK3x5Ku7"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      I.K. Gujral Punjab Technical University, Jalandhar, Punjab
+                    </a>
                   </span>
                   {/* <span id="data">
                     To Be Announced
@@ -194,9 +202,7 @@ const Main = () => {
                   Google's latest developer solutions, products, and technology.
                 </p>
                 <div className="">
-                  <button className="btn btn-primary rounded-pill disabled">
-                    Registrations Starting Soon
-                  </button>
+                  <button data-event-id="80002610412454" data-ticket-id="0" class="ae-ticket-book-button btn btn-primary rounded-pill">Book Tickets</button>
                 </div>
               </div>
             </div>
