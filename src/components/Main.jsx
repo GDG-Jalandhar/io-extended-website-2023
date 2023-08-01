@@ -72,16 +72,16 @@ const Main = () => {
       image: "https://avatars.githubusercontent.com/u/28017507?v=4",
     },
     {
+      name: "Amanpreet Kaur",
+      position: "Ambassador",
+      company: "Women Techmakers",
+      image: amanpreet_pic,
+    },
+    {
       name: "Veer Pratap Singh",
       position: "Technical Lead",
       company: "Antier Solutions",
       image: veer_pic,
-    },
-    {
-      name: "Amanpreet Kaur",
-      position: "Mobile Team Lead",
-      company: "O7 Solutions",
-      image: amanpreet_pic,
     },
     {
       name: "Harnarinder Singh",
