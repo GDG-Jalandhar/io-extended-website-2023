@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import details_img from "../assets/details_img.jpg";
 import googledev from "../assets/googledev.jpg";
 import Bizarre_Coders from "../assets/Bizarre_Coders.jpg";
@@ -18,12 +18,24 @@ import surbhi_pic from "../assets/surbhi_pic.jpg";
 import suraj_pic from "../assets/suraj_pic.jpg";
 import simar_pic from "../assets/simar_pic.jpg";
 import gurkirat_pic from "../assets/gurkirat_pic.jpeg";
+import Dharmesh_Vaya from "../assets/Dharmesh_Vaya.jpg";
+import Adit_Lal from "../assets/Adit_Lal.JPG";
+import Nitin_Tiwari from "../assets/Nitin_Tiwari.jpg";
+import Aashi_Dutt from "../assets/Aashi_Dutt.jpeg";
+import Amanpreet_Kaur from "../assets/Amanpreet_Kaur.jpg";
 
-import {
-  
-} from "@fortawesome/free-brands-svg-icons";
+import {} from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+  faGithub,
+  faLink,
+} from "@fortawesome/free-brands-svg-icons";
+import { faLink as faSolidLink } from "@fortawesome/free-solid-svg-icons";
 
 const Main = () => {
   const techs = [
@@ -61,6 +73,171 @@ const Main = () => {
       name: "Web",
       link: "https://developers.google.com/web",
       logo: "https://io.google/2022/app/images/web-logo.svg",
+    },
+  ];
+
+  const speakers = [
+    {
+      image: Dharmesh_Vaya,
+      name: "Dharmesh Vaya",
+      position: "Solutions Architect",
+      company: "Palo Alto Networks",
+      sessionTitle: "GCP for Everyone",
+      desciption:
+        "Dharmesh is a technologist known for his ability of developing enterprise applications on Cloud Platforms and fostering a spirit of innovation among teams, with a diverse experience around Banking, e-Commerce, Media/Entertainment to name a few. With over 17 years of experience, he currently works at PaloAlto Networks as a Solutions Architect, protecting and securing the Clouds. He is a Google Developer Expert for Google Cloud Platform and actively manages Google Cloud Developers Community, Mumbai.",
+      socialLinks: [
+        {
+          linkedin: "https://linkedin.com/in/dharmeshvaya",
+        },
+        {
+          twitter: "https://x.com/DRVaya",
+        },
+        {
+          github: "",
+        },
+        {
+          others: "",
+        },
+      ],
+    },
+    {
+      image: Adit_Lal,
+      name: "Adit lal",
+      position: "Senior Android Manager and Architect",
+      company: "Viacom18",
+      sessionTitle:
+        "Accelerate your key learnings of modern Android app development with KMM",
+      desciption:
+        "Adit is a Senior Android Manager and Architect, currently working at Viacom18/ JioCinema. He has been working in the industry for 10 year, primarily helping build Android mobile products and scaling them up. Some of his hobbies are Stargazing, Travel, and Landscape Photography.",
+      socialLinks: [
+        {
+          linkedin: "https://www.linkedin.com/in/aditlal/",
+        },
+        {
+          twitter: "http://twitter.com/aditlal",
+        },
+        {
+          github: "https://github.com/aldefy",
+        },
+        {
+          others: "",
+        },
+      ],
+    },
+    {
+      image: Nitin_Tiwari,
+      name: "Nitin Tiwari",
+      position: "Software Engineer",
+      company: "LTIMindtree",
+      sessionTitle: "Venturing into the world of Generative AI",
+      desciption:
+        "Nitin is a software engineer at LTIMindtree and a Machine Learning Google Developer Expert. With a strong dedication to sharing knowledge and supporting the community, Nitin enjoys helping others explore the world of AI and ML and is always open to collaborations to build for the community.  ",
+      socialLinks: [
+        {
+          linkedin: "https://www.linkedin.com/in/tiwari-nitin/",
+        },
+        {
+          twitter: "https://twitter.com/NSTiwari21",
+        },
+        {
+          github: "https://github.com/NSTiwari",
+        },
+        {
+          others: "https://developers.google.com/profile/u/nitin-tiwari",
+        },
+      ],
+    },
+    {
+      image: Aashi_Dutt,
+      name: "Aashi Dutt",
+      position: "Co-founder",
+      company: "MedEnGauge Healthcare pvt ltd ",
+      sessionTitle: "Collaborate, Innovate, Elevate: The Power of Communities",
+      desciption:
+        "Aashi is a masters student at Georgia Institute of Technology, Atlanta, USA specialising in field of machine learning. She is an Alumni of MIT, Cambridge, an active community speaker, 2X kaggle expert and leads the TFUG Chandigarh chapter. Currently, she is working on her healthcare startup along with many AI based products. ",
+      socialLinks: [
+        {
+          linkedin: "",
+        },
+        {
+          twitter: "https://twitter.com/aashidutt?lang=en",
+        },
+        {
+          github: "",
+        },
+        {
+          others: "",
+        },
+      ],
+    },
+    {
+      image: Amanpreet_Kaur,
+      name: "Amanpreet Kaur",
+      position: "Mobile team lead ",
+      company: "O7 Solutions ",
+      sessionTitle: "Roadmap to flutter ",
+      desciption:
+        "I'm mobile team leading in O7 Solutions dealing wrh Android and iOS apps. I like to code in kotlin, swift and dart.",
+      socialLinks: [
+        {
+          linkedin: "https://www.linkedin.com/in/kauramanp/",
+        },
+        {
+          twitter: "",
+        },
+        {
+          github: "https://github.com/kauramanp",
+        },
+        {
+          others: "",
+        },
+      ],
+    },
+    {
+      image: veer_pic,
+      name: "Veer Pratap Singh",
+      position: "Tech Lead",
+      company: "Antier Solutions",
+      sessionTitle: "Welcome Keynote",
+      desciption:
+        "Veer Pratap Singh is a Full Stack Web3 Developer with more than 3 years of professional experience. He is having a very good knowledge about React, Nodejs, Nextjs, Solidity, Rust etc. He loves to speak and volunteer at tech events and meetups as he thinks knowledge increases as we share it.",
+      socialLinks: [
+        {
+          linkedin: "https://www.linkedin.com/in/veer-pratap-singh/",
+        },
+        {
+          twitter: "https://twitter.com/theveer5",
+        },
+        {
+          github: "https://github.com/coolveer",
+        },
+        {
+          others: "https://veertech.co.in/",
+        },
+      ],
+    },
+    {
+      image: "https://avatars.githubusercontent.com/u/28017507?v=4",
+      name: "Simar Preet Singh",
+      position: "Organiser",
+      company: "GDG Jalandhar",
+      sessionTitle: "Web's New Swag: Dialogs, Popovers, and More.",
+      desciption:
+        "Simar Preet Singh is a dynamic, motivated and result oriented professional with more than 5 years of experience in the Information Technology industry and loves contributing to the Dev Community. His motto is - `Succeed and help others succeed`. He is skilled in Node.js, Angular, React, Ionic, Capacitor and Firebase. Currently, he is working with Redaptive Inc. as Software Engineer.",
+      socialLinks: [
+        {
+          linkedin: "https://www.linkedin.com/in/programmersingh/",
+        },
+        {
+          twitter: "https://twitter.com/programmersingh",
+        },
+        {
+          github: "https://github.com/programmer-singh",
+        },
+        {
+          others: "https://programmersingh.dev",
+        },
+      ],
     },
   ];
 
@@ -145,204 +322,393 @@ const Main = () => {
     },
   ];
 
-  const teamMembersRender = teamMembers.map((member, index) => <div key={member.name+member.position+member.company} className="card col-md-4 col-lg-2 mx-3 mb-5">
-    <div className="team-image-wrapper">
-      <img className="img-thumbnail object-cover object-top rounded-circle"  src={member.image} alt={member.name + ' profile'}/>
+  const teamMembersRender = teamMembers.map((member, index) => (
+    <div
+      key={member.name + member.position + member.company}
+      className="card col-md-4 col-lg-2 mx-3 mb-5"
+    >
+      <div className="team-image-wrapper">
+        <img
+          className="img-thumbnail object-cover object-top rounded-circle"
+          src={member.image}
+          alt={member.name + " profile"}
+        />
+      </div>
+      <p className="text-blk name">{member.name}</p>
+      <p className="text-blk ">{member.position}</p>
+      <p className="text-blk ">
+        <b>{member.company}</b>
+      </p>
     </div>
-    <p className="text-blk name">{member.name}</p>
-    <p className="text-blk ">{member.position}</p>
-    <p className="text-blk ">
-      <b>{member.company}</b>
-    </p>
-  </div>);
+  ));
+
+  const [selectedMember, setSelectedMember] = useState(null);
+
+  const handleMemberClick = (member) => {
+    setSelectedMember(member);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedMember(null);
+  };
+
+  const speakersRender = speakers.map((member, index) => (
+    <div
+      key={member.name + member.position + member.company}
+      className="card col-md-4 col-lg-2 mx-3 mb-5"
+      style={{
+        cursor: "pointer",
+      }}
+      onClick={() => handleMemberClick(member)}
+    >
+      <div className="team-image-wrapper">
+        <img
+          className="img-thumbnail object-cover object-top rounded-circle"
+          src={member.image}
+          alt={member.name + " profile"}
+        />
+      </div>
+      <p className="text-blk name">{member.name}</p>
+      <p className="text-blk ">{member.position}</p>
+      <p className="text-blk ">
+        <b>{member.company}</b>
+      </p>
+    </div>
+  ));
+
   return (
     <>
       <ImageComponent />
       <div className="container-fluid justify-content-center mt-5" id="about">
         <div className="row justify-content-center">
           <div className="col-md-10">
-          <div className="row">
-            <div className="col-lg-7">
-              <h1 className="font-weight-lighter header">
-                Unleash <br/><span id="tech-event">Tomorrow's Tech Today:</span><br/>
-                <span id="developers">Learn, Code, Innovate!</span>
-              </h1>
+            <div className="row">
+              <div className="col-lg-7">
+                <h1 className="font-weight-lighter header">
+                  Unleash <br />
+                  <span id="tech-event">Tomorrow's Tech Today:</span>
+                  <br />
+                  <span id="developers">Learn, Code, Innovate!</span>
+                </h1>
 
-              <div className="event-details">
-                <p className="m-0">
-                  <i className="fa fa-calendar"></i>
-                  <span id="data" className="ms-1">August 12 , 2023</span>
-                  {/* <span id="data">To Be Announced</span> */}
-                </p>
-                <p className="m-0">
-                  <i className="fa fa-clock"></i>
-                  <span id="data" className="ms-1">09:00 AM - 4:00 PM IST</span>
-                  {/* <span id="data">To Be Announced</span> */}
-                </p>
-                <p className="m-0" id="location">
-                  <i className="fa fa-map-marker"></i> 
-                  <span id="data" className="ms-1">
-                  <a
-                      id="data"
-                      className="ms-1 text-decoration-underline"
-                      href="https://goo.gl/maps/siUi8Lr2nWK3x5Ku7"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      I.K. Gujral Punjab Technical University, Jalandhar, Punjab
-                    </a>
-                  </span>
-                  {/* <span id="data">
+                <div className="event-details">
+                  <p className="m-0">
+                    <i className="fa fa-calendar"></i>
+                    <span id="data" className="ms-1">
+                      August 12 , 2023
+                    </span>
+                    {/* <span id="data">To Be Announced</span> */}
+                  </p>
+                  <p className="m-0">
+                    <i className="fa fa-clock"></i>
+                    <span id="data" className="ms-1">
+                      09:00 AM - 4:00 PM IST
+                    </span>
+                    {/* <span id="data">To Be Announced</span> */}
+                  </p>
+                  <p className="m-0" id="location">
+                    <i className="fa fa-map-marker"></i>
+                    <span id="data" className="ms-1">
+                      <a
+                        id="data"
+                        className="ms-1 text-decoration-underline"
+                        href="https://goo.gl/maps/siUi8Lr2nWK3x5Ku7"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        I.K. Gujral Punjab Technical University, Jalandhar,
+                        Punjab
+                      </a>
+                    </span>
+                    {/* <span id="data">
                     To Be Announced
                   </span> */}
+                  </p>
+                  <p className="mt-2">
+                    Google I/O Extended is the community led counterpart to
+                    Google I/O, our annual Google led conference where the world
+                    hears about Google's latest developer solutions, products,
+                    and technology.
+                  </p>
+                  <div className="">
+                    <button
+                      data-event-id="80002610412454"
+                      data-ticket-id="0"
+                      class="ae-ticket-book-button btn btn-primary rounded-pill"
+                    >
+                      Book Tickets
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-5 d-flex flex-column justify-content-center mt-lg-0 mt-sm-4 mt-4">
+                <img
+                  src="https://io.google/2023/app/images/cs_products.svg"
+                  className="img-fluid rounded-9"
+                  alt="Google IO Laptop"
+                />
+              </div>
+            </div>
+            <div className="row mt-4">
+              <div className="col-lg-6 d-flex flex-column justify-content-center">
+                <img src={details_img} className="img-fluid rounded-9" alt="" />
+              </div>
+              <div className="col-lg-6 d-flex flex-column justify-content-center ">
+                <section className="text-center mt-lg-0 mt-sm-4 mt-3">
+                  <h2>What is Google I/O Extended Jalandhar ?</h2>
+                  <p>
+                    Google I/O Extended Jalandhar, a full day event, where you
+                    find updates of Google's Products. The magic of I/O
+                    doesn&apos;t end after the main event. Local developers come
+                    together for I/O Extended events to discuss the latest new
+                    technologies, summarize content, hosting Q&As, and meet
+                    other technology enthusiasts. This will be a physical event,
+                    promising to each of our attendee an experience, unlike
+                    anything they've ever seen.
+                  </p>
+                </section>
+              </div>
+            </div>
+            <div className="row mt-5">
+              <div className="col-12">
+                <h1 className="text-center">Technologies in Focus</h1>
+                <p className="my-3">
+                  At sessions that span from the technical to the visionary,
+                  let&apos;s celebrate and discover what the technologies can
+                  enable: how product innovation, open source, and ML and AI can
+                  propel enterprises forward and solve the big problems that
+                  impact all of us.
                 </p>
-                <p className="mt-2">
-                  Google I/O Extended is the community led counterpart to Google
-                  I/O, our annual Google led conference where the world hears about
-                  Google's latest developer solutions, products, and technology.
-                </p>
-                <div className="">
-                  <button data-event-id="80002610412454" data-ticket-id="0" class="ae-ticket-book-button btn btn-primary rounded-pill">Book Tickets</button>
+                <div className="icons d-flex flex-wrap justify-content-center aligh-items-center">
+                  {techs?.map((result, index) => (
+                    <div className="px-2 mb-3" key={index}>
+                      <a href={result.link} target="_blank" rel="noreferrer">
+                        {" "}
+                        <img
+                          src={result.logo}
+                          title={result.name}
+                          alt={result.name}
+                        />{" "}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-            <div className="col-lg-5 d-flex flex-column justify-content-center mt-lg-0 mt-sm-4 mt-4">
-              <img
-                src="https://io.google/2023/app/images/cs_products.svg"
-                className="img-fluid rounded-9"
-                alt="Google IO Laptop"
-              />
-            </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-lg-6 d-flex flex-column justify-content-center">
-              <img src={details_img} className="img-fluid rounded-9" alt="" />
-            </div>
-            <div className="col-lg-6 d-flex flex-column justify-content-center ">
-              <section className="text-center mt-lg-0 mt-sm-4 mt-3">
-                <h2>What is Google I/O Extended Jalandhar ?</h2>
-                <p>
-                  Google I/O Extended Jalandhar, a full day event, where you find
-                  updates of Google's Products. The magic of I/O doesn&apos;t end
-                  after the main event. Local developers come together for I/O
-                  Extended events to discuss the latest new technologies, summarize
-                  content, hosting Q&As, and meet other technology enthusiasts. This
-                  will be a physical event, promising to each of our attendee an
-                  experience, unlike anything they've ever seen.
-                </p>
-              </section>
-            </div>
-          </div>
-          <div className="row mt-5">
-            <div className="col-12">
-              <h1 className="text-center">Technologies in Focus</h1>
-              <p className="my-3">
-                At sessions that span from the technical to the visionary, let&apos;s
-                celebrate and discover what the technologies can enable: how product
-                innovation, open source, and ML and AI can propel enterprises forward
-                and solve the big problems that impact all of us.
-              </p>
-              <div className="icons d-flex flex-wrap justify-content-center aligh-items-center">
-                {techs?.map((result, index) => (
-                  <div className="px-2 mb-3" key={index}>
-                    <a href={result.link} target="_blank" rel="noreferrer">
-                      {" "}
-                      <img
-                        src={result.logo}
-                        title={result.name}
-                        alt={result.name}
-                      />{" "}
-                    </a>
-                  </div>
-                ))}
+
+            <hr />
+            <div className="team mt-5" id="speakers">
+              <h2 className="text-center mb-3">Speakers</h2>
+
+              <div className="row flex-wrap justify-content-center">
+                {speakersRender}
               </div>
             </div>
-          </div>
-
-          <hr />
-          <div className="partners" id="partners">
-            <h2 className="text-center mt-2">Sponsors</h2>
-            <p className="text-center mt-2 mx-2">
-              Sponsors dedicated to building remarkable experience!
-            </p>
-
-            <div className="googledev">
-              <a href="https://developers.googleblog.com/" target="_blank" rel="noreferrer">
-                <img
-                  src={googledev}
-                  title="Google Developers"
-                  className="googledevimg"
-                  alt="Google Developers logo"
-                />
-              </a>
-
-              <h2 className="text-center mt-2">Community Partners</h2>
-              <div className="community_logos">
-                <a href="https://gdg.community.dev/gdg-jalandhar/" target="_blank" rel="noreferrer">
-                  <div className="commdiv">
-                    <div>
-                      <img
-                        src={GDG_Jalandhar}
-                        title="GDSC IKGPTU"
-                        className="gdgjalandharimg"
-                        alt="GDSC IKGPTU logo"
-                      />
+            {/* Pop-up */}
+            {selectedMember && (
+              <div className="modal popup" tabIndex="-1" role="dialog">
+                <div className="" role="document">
+                  <div className="modal-content popup-content">
+                    <div className="modal-header">
+                      <div
+                        type="button"
+                        className="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                        onClick={handleClosePopup}
+                        style={{
+                          position: "absolute",
+                          top: "10px",
+                          right: "20px",
+                          fontSize: "1.8rem",
+                        }}
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6  align-items-center">
+                          <div class="text-center">
+                            <img
+                              className="img-thumbnail object-cover object-top rounded-circle"
+                              src={selectedMember.image}
+                              alt={selectedMember.name + " profile"}
+                              style={{ width: "200px", height: "200px" }}
+                            />
+                            <div>
+                              <h3 style={{ color: "var(--main-blue)" }}>
+                                {selectedMember.name}
+                              </h3>
+                              <div>{selectedMember.position}</div>
+                              <div>{selectedMember.company}</div>
+                              <div className="followus mt-2">
+                                <a
+                                  href={selectedMember.socialLinks[0].linkedin}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <FontAwesomeIcon
+                                    className="ml-3 pl-3 footer-icons foot-li"
+                                    icon={faLinkedin}
+                                  />
+                                </a>
+                                <a
+                                  href={selectedMember.socialLinks[1].twitter}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <FontAwesomeIcon
+                                    className="ml-3 pl-3 footer-icons foot-tw"
+                                    icon={faTwitter}
+                                  />
+                                </a>
+                                <a
+                                  href={selectedMember.socialLinks[2].github}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <FontAwesomeIcon
+                                    className="ml-3 pl-3 footer-icons foot-github"
+                                    icon={faGithub}
+                                  />
+                                </a>
+                                <a
+                                  href={selectedMember.socialLinks[3].others}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  <FontAwesomeIcon
+                                    className="ml-3 pl-3 footer-icons foot-others"
+                                    icon={faSolidLink}
+                                  />
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center">
+                          <div class="text-left">
+                            <div className="">
+                              <h3 className="mt-md-0 mt-4">
+                                About{" "}
+                                <span style={{ color: "var(--main-red)" }}>
+                                  {selectedMember.name}
+                                </span>{" "}
+                              </h3>
+                              <div className="aboutff my-4">
+                                {selectedMember.desciption}
+                              </div>
+                              <h4>
+                                <span style={{ color: "var(--main-red)" }}>
+                                  {" "}
+                                  {selectedMember.name}{" "}
+                                </span>{" "}
+                                will be talking about{" "}
+                                <span style={{ color: "var(--main-green)" }}>
+                                  {" "}
+                                  {selectedMember.sessionTitle}{" "}
+                                </span>
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div>GDSC IKGPTU</div>
                   </div>
-                </a>
-                <a
-                  href="https://bizarre-coders-official.netlify.app/"
-                  target="_blank" rel="noreferrer"
-                >
-                  <div className="commdiv">
-                    <img
-                      src={Bizarre_Coders}
-                      title="Bizarre Coders"
-                      className="bizarrecodersimg"
-                      alt="Bizarre Coders logo"
-                    />
+                </div>
+              </div>
+            )}
 
-                    <div>Bizarre Coders</div>
-                  </div>
+            <hr />
+            <div className="partners" id="partners">
+              <h2 className="text-center mt-2">Sponsors</h2>
+              <p className="text-center mt-2 mx-2">
+                Sponsors dedicated to building remarkable experience!
+              </p>
+
+              <div className="googledev">
+                <a
+                  href="https://developers.googleblog.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={googledev}
+                    title="Google Developers"
+                    className="googledevimg"
+                    alt="Google Developers logo"
+                  />
+                </a>
+
+                <h2 className="text-center mt-2">Community Partners</h2>
+                <div className="community_logos">
+                  <a
+                    href="https://gdg.community.dev/gdg-jalandhar/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="commdiv">
+                      <div>
+                        <img
+                          src={GDG_Jalandhar}
+                          title="GDSC IKGPTU"
+                          className="gdgjalandharimg"
+                          alt="GDSC IKGPTU logo"
+                        />
+                      </div>
+                      <div>GDSC IKGPTU</div>
+                    </div>
+                  </a>
+                  <a
+                    href="https://bizarre-coders-official.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <div className="commdiv">
+                      <img
+                        src={Bizarre_Coders}
+                        title="Bizarre Coders"
+                        className="bizarrecodersimg"
+                        alt="Bizarre Coders logo"
+                      />
+
+                      <div>Bizarre Coders</div>
+                    </div>
+                  </a>
+                </div>
+
+                <h2 className="text-center mt-2">Venue Partner</h2>
+                <a href="https://ptu.ac.in/" target="_blank" rel="noreferrer">
+                  <img
+                    src={ptulogo}
+                    title="IKGPTU"
+                    className="googledevimgptu"
+                    alt="IK Gujral Punjab Technical University logo"
+                  />
                 </a>
               </div>
+            </div>
 
-              <h2 className="text-center mt-2">Venue Partner</h2>
-              <a href="https://ptu.ac.in/" target="_blank" rel="noreferrer">
-                <img
-                  src={ptulogo}
-                  title="IKGPTU"
-                  className="googledevimgptu"
-                  alt="IK Gujral Punjab Technical University logo"
-                />
-              </a>
+            {/* Team */}
+
+            <hr />
+            <div className="team mt-5" id="team">
+              <h2 className="text-center mb-3">Team</h2>
+
+              <div className="row flex-wrap justify-content-center">
+                {teamMembersRender}
+              </div>
+            </div>
+
+            <hr />
+            <div className="faqs" id="faqs">
+              <h2 className="text-center mt-2">Frequently asked questions</h2>
+              <p className="text-center mt-2">
+                Need Answers? Everything you need to know.
+              </p>
             </div>
           </div>
-
-          {/* Team */}
-
-          <hr />
-          <div className="team mt-5" id="team">
-            <h2 className="text-center mb-3">Team</h2>
-
-            <div className="row flex-wrap justify-content-center">
-              {teamMembersRender}
-            </div>
-          </div>
-
-          <hr />
-          <div className="faqs" id="faqs">
-            <h2 className="text-center mt-2">Frequently asked questions</h2>
-            <p className="text-center mt-2">
-              Need Answers? Everything you need to know.
-            </p>
-          </div>
-        </div>
         </div>
       </div>
-
-      
 
       {/* <hr /> */}
 
@@ -415,135 +781,7 @@ const Main = () => {
         </section>
       </div> */}
 
-      {/* Speakers */}
-      {/* <div className="schedule-section" id="speakers">
-        <h1 className="schedule-title">Speakers</h1>
-        <div className="responsive-container-block container ">
-          <div className="responsive-container-block">
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.15.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.15.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-            <div className="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
-              <div className="card">
-                <div className="team-image-wrapper">
-                  <img
-                    className="team-member-image"
-                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png"
-                  />
-                </div>
-                <p className="text-blk name">Name</p>
-                <p className="text-blk position">Job Role</p>
-                <p className="text-blk ">Company</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       {/* Partners */}
-
-      
 
       <MDBContainer className="mt-5" style={{ maxWidth: "90%" }}>
         <MDBAccordion>
@@ -614,14 +852,22 @@ const Main = () => {
           <section className="d-flex  follow-section">
             <h4>Follow Us : </h4>
             <div className="followus ">
-              <a href="https://www.facebook.com/GDGJalandhar" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.facebook.com/GDGJalandhar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   className="ml-3 pl-3 footer-icons foot-fb"
                   icon={["fab", "facebook"]}
                   title="Follow GDG Jalandhar on Facebook"
                 />
               </a>
-              <a href="https://www.instagram.com/gdgjalandhar" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.instagram.com/gdgjalandhar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   className="ml-3 pl-3 footer-icons foot-in"
                   icon={["fab", "instagram"]}
@@ -630,7 +876,8 @@ const Main = () => {
               </a>
               <a
                 href="http://linkedin.com/company/GDGJalandhar"
-                target="_blank" rel="noreferrer"
+                target="_blank"
+                rel="noreferrer"
               >
                 <FontAwesomeIcon
                   className="ml-3 pl-3 footer-icons foot-li"
@@ -638,7 +885,11 @@ const Main = () => {
                   title="Follow GDG Jalandhar on LinkedIn"
                 />
               </a>
-              <a href="https://twitter.com/gdgjalandhar" target="_blank" rel="noreferrer">
+              <a
+                href="https://twitter.com/gdgjalandhar"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   className="ml-3 pl-3 footer-icons foot-tw"
                   icon={["fab", "twitter"]}
@@ -656,21 +907,24 @@ const Main = () => {
             <a
               className="footer-links"
               href="https://developers.google.com/community/gdg"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               About GDG Program
             </a>
             <a
               className="footer-links"
               href="https://www.womentechmakers.com/"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               About WTM Program
             </a>
             <a
               className="footer-links"
               href="https://developers.google.com/community-guidelines"
-              target="_blank" rel="noreferrer"
+              target="_blank"
+              rel="noreferrer"
             >
               Community Guidelines
             </a>
