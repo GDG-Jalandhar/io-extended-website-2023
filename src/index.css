@@ -991,8 +991,7 @@ hr {
 }
 
 .followus > * {
-  margin-left: 1rem;
-  margin-bottom: 2px;
+  margin: 0 5px;
 }
 
 .follow-section > * {
