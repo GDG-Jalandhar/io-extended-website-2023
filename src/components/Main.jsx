@@ -28,12 +28,9 @@ import {} from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
-  faInstagram,
   faLinkedin,
   faTwitter,
   faGithub,
-  faLink,
 } from "@fortawesome/free-brands-svg-icons";
 import { faLink as faSolidLink } from "@fortawesome/free-solid-svg-icons";
 
@@ -85,20 +82,10 @@ const Main = () => {
       sessionTitle: "GCP for Everyone",
       desciption:
         "Dharmesh is a technologist known for his ability of developing enterprise applications on Cloud Platforms and fostering a spirit of innovation among teams, with a diverse experience around Banking, e-Commerce, Media/Entertainment to name a few. With over 17 years of experience, he currently works at PaloAlto Networks as a Solutions Architect, protecting and securing the Clouds. He is a Google Developer Expert for Google Cloud Platform and actively manages Google Cloud Developers Community, Mumbai.",
-      socialLinks: [
-        {
-          linkedin: "https://linkedin.com/in/dharmeshvaya",
-        },
-        {
-          twitter: "https://x.com/DRVaya",
-        },
-        {
-          github: "",
-        },
-        {
-          others: "",
-        },
-      ],
+      socialLinks: {
+        linkedin: "https://linkedin.com/in/dharmeshvaya",
+        twitter: "https://x.com/DRVaya",
+      },
     },
     {
       image: Adit_Lal,
@@ -109,20 +96,11 @@ const Main = () => {
         "Accelerate your key learnings of modern Android app development with KMM",
       desciption:
         "Adit is a Senior Android Manager and Architect, currently working at Viacom18/ JioCinema. He has been working in the industry for 10 year, primarily helping build Android mobile products and scaling them up. Some of his hobbies are Stargazing, Travel, and Landscape Photography.",
-      socialLinks: [
-        {
-          linkedin: "https://www.linkedin.com/in/aditlal/",
-        },
-        {
-          twitter: "http://twitter.com/aditlal",
-        },
-        {
-          github: "https://github.com/aldefy",
-        },
-        {
-          others: "",
-        },
-      ],
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/aditlal/",
+        twitter: "http://twitter.com/aditlal",
+        github: "https://github.com/aldefy",
+      },
     },
     {
       image: Nitin_Tiwari,
@@ -132,20 +110,12 @@ const Main = () => {
       sessionTitle: "Venturing into the world of Generative AI",
       desciption:
         "Nitin is a software engineer at LTIMindtree and a Machine Learning Google Developer Expert. With a strong dedication to sharing knowledge and supporting the community, Nitin enjoys helping others explore the world of AI and ML and is always open to collaborations to build for the community.  ",
-      socialLinks: [
-        {
-          linkedin: "https://www.linkedin.com/in/tiwari-nitin/",
-        },
-        {
-          twitter: "https://twitter.com/NSTiwari21",
-        },
-        {
-          github: "https://github.com/NSTiwari",
-        },
-        {
-          others: "https://developers.google.com/profile/u/nitin-tiwari",
-        },
-      ],
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/tiwari-nitin/",
+        twitter: "https://twitter.com/NSTiwari21",
+        github: "https://github.com/NSTiwari",
+        others: "https://developers.google.com/profile/u/nitin-tiwari",
+      },
     },
     {
       image: Aashi_Dutt,
@@ -155,20 +125,9 @@ const Main = () => {
       sessionTitle: "Collaborate, Innovate, Elevate: The Power of Communities",
       desciption:
         "Aashi is a masters student at Georgia Institute of Technology, Atlanta, USA specialising in field of machine learning. She is an Alumni of MIT, Cambridge, an active community speaker, 2X kaggle expert and leads the TFUG Chandigarh chapter. Currently, she is working on her healthcare startup along with many AI based products. ",
-      socialLinks: [
-        {
-          linkedin: "",
-        },
-        {
-          twitter: "https://twitter.com/aashidutt?lang=en",
-        },
-        {
-          github: "",
-        },
-        {
-          others: "",
-        },
-      ],
+      socialLinks: {
+        twitter: "https://twitter.com/aashidutt",
+      },
     },
     {
       image: Amanpreet_Kaur,
@@ -178,20 +137,10 @@ const Main = () => {
       sessionTitle: "Roadmap to flutter ",
       desciption:
         "I'm mobile team leading in O7 Solutions dealing wrh Android and iOS apps. I like to code in kotlin, swift and dart.",
-      socialLinks: [
-        {
-          linkedin: "https://www.linkedin.com/in/kauramanp/",
-        },
-        {
-          twitter: "",
-        },
-        {
-          github: "https://github.com/kauramanp",
-        },
-        {
-          others: "",
-        },
-      ],
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/amanpreet-kaur-7b1b0a1a4/",
+        github: "https://github.com/kauramanp",
+      },
     },
     {
       image: veer_pic,
@@ -201,20 +150,12 @@ const Main = () => {
       sessionTitle: "Welcome Keynote",
       desciption:
         "Veer Pratap Singh is a Full Stack Web3 Developer with more than 3 years of professional experience. He is having a very good knowledge about React, Nodejs, Nextjs, Solidity, Rust etc. He loves to speak and volunteer at tech events and meetups as he thinks knowledge increases as we share it.",
-      socialLinks: [
-        {
-          linkedin: "https://www.linkedin.com/in/veer-pratap-singh/",
-        },
-        {
-          twitter: "https://twitter.com/theveer5",
-        },
-        {
-          github: "https://github.com/coolveer",
-        },
-        {
-          others: "https://veertech.co.in/",
-        },
-      ],
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/veer-pratap-singh/",
+        twitter: "https://twitter.com/theveer5",
+        github: "https://twitter.com/theveer5",
+        others: "https://veertech.co.in/",
+      },
     },
     {
       image: "https://avatars.githubusercontent.com/u/28017507?v=4",
@@ -224,20 +165,12 @@ const Main = () => {
       sessionTitle: "Web's New Swag: Dialogs, Popovers, and More.",
       desciption:
         "Simar Preet Singh is a dynamic, motivated and result oriented professional with more than 5 years of experience in the Information Technology industry and loves contributing to the Dev Community. His motto is - `Succeed and help others succeed`. He is skilled in Node.js, Angular, React, Ionic, Capacitor and Firebase. Currently, he is working with Redaptive Inc. as Software Engineer.",
-      socialLinks: [
-        {
-          linkedin: "https://www.linkedin.com/in/programmersingh/",
-        },
-        {
-          twitter: "https://twitter.com/programmersingh",
-        },
-        {
-          github: "https://github.com/programmer-singh",
-        },
-        {
-          others: "https://programmersingh.dev",
-        },
-      ],
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/programmersingh/",
+        twitter: "https://twitter.com/programmersingh",
+        github: "https://github.com/programmer-singh",
+        others: "https://programmersingh.dev",
+      },
     },
   ];
 
@@ -345,6 +278,7 @@ const Main = () => {
   const [selectedMember, setSelectedMember] = useState(null);
 
   const handleMemberClick = (member) => {
+    console.log(member);
     setSelectedMember(member);
   };
 
@@ -540,47 +474,55 @@ const Main = () => {
                               </h3>
                               <div>{selectedMember.position}</div>
                               <div>{selectedMember.company}</div>
-                              <div className="followus mt-2">
-                                <a
-                                  href={selectedMember.socialLinks[0].linkedin}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  <FontAwesomeIcon
-                                    className="ml-3 pl-3 footer-icons foot-li"
-                                    icon={faLinkedin}
-                                  />
-                                </a>
-                                <a
-                                  href={selectedMember.socialLinks[1].twitter}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  <FontAwesomeIcon
-                                    className="ml-3 pl-3 footer-icons foot-tw"
-                                    icon={faTwitter}
-                                  />
-                                </a>
-                                <a
-                                  href={selectedMember.socialLinks[2].github}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  <FontAwesomeIcon
-                                    className="ml-3 pl-3 footer-icons foot-github"
-                                    icon={faGithub}
-                                  />
-                                </a>
-                                <a
-                                  href={selectedMember.socialLinks[3].others}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  <FontAwesomeIcon
-                                    className="ml-3 pl-3 footer-icons foot-others"
-                                    icon={faSolidLink}
-                                  />
-                                </a>
+                              <div className="followus mt-2 d-flex justify-content-center align-items-center">
+                                {selectedMember.socialLinks.linkedin && (
+                                  <a
+                                    href={selectedMember.socialLinks.linkedin}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    <FontAwesomeIcon
+                                      className="ml-3 pl-3 footer-icons foot-li"
+                                      icon={faLinkedin}
+                                    />
+                                  </a>
+                                )}
+                                {selectedMember.socialLinks.twitter && (
+                                  <a
+                                    href={selectedMember.socialLinks.twitter}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    <FontAwesomeIcon
+                                      className="ml-3 pl-3 footer-icons foot-tw"
+                                      icon={faTwitter}
+                                    />
+                                  </a>
+                                )}
+                                {selectedMember.socialLinks?.github && (
+                                  <a
+                                    href={selectedMember.socialLinks.github}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    <FontAwesomeIcon
+                                      className="ml-3 pl-3 footer-icons foot-github"
+                                      icon={faGithub}
+                                    />
+                                  </a>
+                                )}
+                                {selectedMember.socialLinks?.others && (
+                                  <a
+                                    href={selectedMember.socialLinks.others}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    <FontAwesomeIcon
+                                      className="ml-3 pl-3 footer-icons foot-others"
+                                      icon={faSolidLink}
+                                    />
+                                  </a>
+                                )}
                               </div>
                             </div>
                           </div>
