@@ -51,11 +51,11 @@ const Navbar = () => {
                 Schedule
               </MDBNavbarLink>
             </MDBNavbarItem> */}
-            {/* <MDBNavbarItem>
+            <MDBNavbarItem>
               <MDBNavbarLink href="#speakers" className="nav-links">
                 Speaker
               </MDBNavbarLink>
-            </MDBNavbarItem> */}
+            </MDBNavbarItem>
 
             <MDBNavbarItem>
               <MDBNavbarLink href="#partners" className="nav-links">
