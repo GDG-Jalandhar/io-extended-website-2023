@@ -452,7 +452,7 @@ const Main = () => {
                         onClick={handleClosePopup}
                         style={{
                           position: "absolute",
-                          top: "10px",
+                          top: "20px",
                           right: "20px",
                           fontSize: "1.8rem",
                         }}
