@@ -431,16 +431,6 @@ const Main = () => {
               </div>
             </div>
             <hr className="mt-5" />
-            <div className="row mt-5">
-              <div className="col-12">
-                <h1 className="text-center">Agenda</h1>
-                
-                <div className="mt-3 d-flex flex-wrap justify-content-center aligh-items-center">
-                  <img className="img-fluid" src={Agenda} alt="Agenda for Google IO Extended Jalandhar" />
-                </div>
-              </div>
-            </div>
-            <hr  className="mt-5"/>
             <div className="team mt-5" id="speakers">
               <h2 className="text-center mb-3">Speakers</h2>
 
@@ -570,7 +560,22 @@ const Main = () => {
               </div>
             )}
 
-            <hr />
+            <hr className="mt-5" />
+            <div id="schedule" className="row mt-5">
+              <div className="col-12">
+                <h1 className="text-center">Agenda</h1>
+
+                <div className="mt-3 d-flex flex-wrap justify-content-center aligh-items-center">
+                  <img
+                    className="img-fluid"
+                    src={Agenda}
+                    alt="Agenda for Google IO Extended Jalandhar"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <hr className="mt-5" />
             <div className="partners" id="partners">
               <h2 className="text-center mt-2">Sponsors</h2>
               <p className="text-center mt-2 mx-2">
