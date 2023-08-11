@@ -46,17 +46,16 @@ const Navbar = () => {
                 About
               </MDBNavbarLink>
             </MDBNavbarItem>
-            {/* <MDBNavbarItem>
-              <MDBNavbarLink href="#schedule" className="nav-links">
-                Schedule
-              </MDBNavbarLink>
-            </MDBNavbarItem> */}
             <MDBNavbarItem>
               <MDBNavbarLink href="#speakers" className="nav-links">
                 Speaker
               </MDBNavbarLink>
             </MDBNavbarItem>
-
+            <MDBNavbarItem>
+              <MDBNavbarLink href="#schedule" className="nav-links">
+                Agenda
+              </MDBNavbarLink>
+            </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBNavbarLink href="#partners" className="nav-links">
                 Partners

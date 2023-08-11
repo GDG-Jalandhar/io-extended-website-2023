@@ -23,6 +23,7 @@ import Adit_Lal from "../assets/Adit_Lal.JPG";
 import Nitin_Tiwari from "../assets/Nitin_Tiwari.jpg";
 import Aashi_Dutt from "../assets/Aashi_Dutt.jpeg";
 import Amanpreet_Kaur from "../assets/Amanpreet_Kaur.jpg";
+import Agenda from "../assets/Agenda-Google-IO-Extended-Jalandhar.jpg";
 
 import {} from "@fortawesome/free-brands-svg-icons";
 
@@ -368,7 +369,7 @@ const Main = () => {
                     <button
                       data-event-id="80002610412454"
                       data-ticket-id="0"
-                      class="ae-ticket-book-button btn btn-primary rounded-pill"
+                      className="ae-ticket-book-button btn btn-primary rounded-pill"
                     >
                       Book Tickets
                     </button>
@@ -429,12 +430,11 @@ const Main = () => {
                 </div>
               </div>
             </div>
-
-            <hr />
+            <hr className="mt-5" />
             <div className="team mt-5" id="speakers">
               <h2 className="text-center mb-3">Speakers</h2>
 
-              <div className="row flex-wrap justify-content-center">
+              <div className="mt-3 row flex-wrap justify-content-center">
                 {speakersRender}
               </div>
             </div>
@@ -459,9 +459,9 @@ const Main = () => {
                       >
                         <span aria-hidden="true">&times;</span>
                       </div>
-                      <div class="row">
-                        <div class="col-md-6  align-items-center">
-                          <div class="text-center">
+                      <div className="row">
+                        <div className="col-md-6  align-items-center">
+                          <div className="text-center">
                             <img
                               className="img-thumbnail object-cover object-top rounded-circle"
                               src={selectedMember.image}
@@ -527,8 +527,8 @@ const Main = () => {
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-6 d-flex align-items-center">
-                          <div class="text-left">
+                        <div className="col-md-6 d-flex align-items-center">
+                          <div className="text-left">
                             <div className="">
                               <h3 className="mt-md-0 mt-4">
                                 About{" "}
@@ -560,7 +560,22 @@ const Main = () => {
               </div>
             )}
 
-            <hr />
+            <hr className="mt-5" />
+            <div id="schedule" className="row mt-5">
+              <div className="col-12">
+                <h1 className="text-center">Agenda</h1>
+
+                <div className="mt-3 d-flex flex-wrap justify-content-center aligh-items-center">
+                  <img
+                    className="img-fluid"
+                    src={Agenda}
+                    alt="Agenda for Google IO Extended Jalandhar"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <hr className="mt-5" />
             <div className="partners" id="partners">
               <h2 className="text-center mt-2">Sponsors</h2>
               <p className="text-center mt-2 mx-2">
